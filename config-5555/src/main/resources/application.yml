@@ -1,0 +1,12 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://github.com/tzs199373/spring-cloud-demo-config.git #GitHub上面的git仓库
+#          uri:  git@github.com:tzs199373/spring-cloud-demo-config.git #GitHub上面的git仓库,git协议

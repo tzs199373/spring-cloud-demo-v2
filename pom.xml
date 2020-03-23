@@ -54,5 +54,6 @@
 		<module>provider-2222</module>
 		<module>common-api</module>
 		<module>zuul-4444</module>
+		<module>config-5555</module>
 	</modules>
 </project>
