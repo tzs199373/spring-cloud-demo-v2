@@ -16,7 +16,7 @@ public class UserController {
     @RequestMapping(value = "/findUserById")
     User findUserById(@RequestParam("userId") Integer id){
         System.out.println(id);
-        System.out.println("consumer3333");
+        System.out.println("consumer3332");
         return providerApi.findUserById(id);
     }
 }

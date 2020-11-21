@@ -9,19 +9,28 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>mycloud</artifactId>
+	<artifactId>consumer-3332</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mycloud</name>
+	<name>consumer-3332</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-cloud.version>Hoxton.SR3</spring-cloud.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
 		<dependency>
@@ -35,7 +44,25 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>common-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
@@ -46,16 +73,4 @@
 		</plugins>
 	</build>
 
-	<modules>
-		<module>consumer-3332</module>
-		<module>consumer-3333</module>
-		<module>eureka-1111</module>
-		<module>eureka-1112</module>
-		<module>eureka-1113</module>
-		<module>provider-2221</module>
-		<module>provider-2222</module>
-		<module>common-api</module>
-		<module>zuul-4444</module>
-		<module>config-5555</module>
-	</modules>
 </project>

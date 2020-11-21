@@ -18,10 +18,11 @@ C:\Windows\System32\drivers\etc	编辑hosts文件
 如果不允许修改，则要更改权限，在属性里操作，具体可以百度。
 
 # 运行
-eureka至少启动一个
-zuul启动
-provider至少启动一个
-consumer启动
+eurek集群至少启动一个,如果三个没有全部启动，其他项目启动时会有连接失败错误，但不影响整个系统;
+zuul启动;
+provider至少启动一个;
+consumer至少启动一个;
+config不用启动,consumer3333使用配置中心config的代码片段已被屏蔽
 
 # 测试
 http://127.0.0.1:4444/consumer/findUserById?userId=1
