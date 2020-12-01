@@ -19,13 +19,14 @@ C:\Windows\System32\drivers\etc	编辑hosts文件
 
 # 运行
 eurek集群至少启动一个,如果三个没有全部启动，其他项目启动时会有连接失败错误，但不影响整个系统;
-zuul启动;
+zuul启动;也可以不启动，不过要测试consumer集群则必须启动
 provider至少启动一个;
 consumer至少启动一个;
-config不用启动,consumer3333使用配置中心config的代码片段已被屏蔽
+config不用启动;consumer3333使用配置中心config的代码片段已被屏蔽
 
 # 测试
-http://127.0.0.1:4444/consumer/findUserById?userId=1
+zuul启动：http://127.0.0.1:4444/consumer/findUserById?userId=1
+zuul不启动，启动consumer3333：http://127.0.0.1:3333/findUserById?userId=1
 初次调用可能会用服务不通的情况
 
 
