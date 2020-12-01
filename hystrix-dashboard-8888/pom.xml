@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>hystrix-dashboard-6666</artifactId>
+	<artifactId>hystrix-dashboard-8888</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hystrix-dashboard-6666</name>
+	<name>hystrix-dashboard-8888</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

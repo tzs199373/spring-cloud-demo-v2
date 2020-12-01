@@ -57,6 +57,6 @@
 		<module>common-api</module>
 		<module>zuul-4444</module>
 		<module>config-5555</module>
-		<module>hystrix-dashboard-6666</module>
+		<module>hystrix-dashboard-8888</module>
 	</modules>
 </project>
