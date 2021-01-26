@@ -58,5 +58,6 @@
 		<module>zuul-4444</module>
 		<module>config-5555</module>
 		<module>hystrix-dashboard-8888</module>
+		<module>consumer-nacos-config</module>
 	</modules>
 </project>
