@@ -44,7 +44,9 @@ consumer至少启动一个，目前consumer-3332注册中心配置为nacos,consu
 
 spring-config: consumer-3333使用spring-config的代码片段已被屏蔽
 
-nacos:也可以做配置中心，无需添加项目，consumer-nacos-config使用nacos作为配置中心，nacos具体配置可以百度
+nacos:也可以做配置中心，无需添加项目，其中consumer-nacos-config微服务使用nacos作为配置中心
+
+nacos可以像spring-config那样被读取配置文件，也可以在程序中被当做K-V读取，需要nacos-client依赖
 
 5、监控（非必须）
 hystrix-dashboard，熔断监控可视化
