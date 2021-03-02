@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: consumer-service
+          uri: lb://consumer
+          predicates:
+            - Path=/consumer/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true

@@ -30,7 +30,9 @@ eureka,集群至少启动一个,如果三个没有全部启动，其他项目启
 
 2、网关（非必须）
 
-zuul，如要测试consumer集群负载均衡则必须启动，zuul注册中心配置为eureka
+zuul-4444，如要测试consumer集群负载均衡则必须启动，zuul注册中心配置为eureka
+
+或者gateway-4441
 
 3、微服务（必须）
 
@@ -55,11 +57,14 @@ hystrix-dashboard，熔断监控可视化
 如果启动了网关zuul：
 http://127.0.0.1:4444/consumer/findUserById?userId=1
 
+如果启动了网关gateway：
+http://127.0.0.1:4441/consumer/findUserById?userId=1
+
 如果未启动网关：
 consumer-3332：http://127.0.0.1:3332/findUserById?userId=1
 consumer-3333：http://127.0.0.1:3333/findUserById?userId=1
 
-初次调用可能会用服务不通的情况
+初次调用可能会用服务不通的情况,返回结果为Tom或another Tom才是成功，微服务调用失败会返回默认man
 
 
 
